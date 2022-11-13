@@ -57,7 +57,7 @@
                         </a>
                     </div>
                 </div>
-                <p class="font-mono font-bold text-lg">Current Version: v1.2.0</p>
+                <p class="font-mono font-bold text-lg">Current Version: v1.2.2</p>
                 <p class="italic text-sm">
                     <b>PLEASE NOTE:</b> Fleeting Heartbeat Studios and its members are not affiliated with Four Leaf
                     Studios in
