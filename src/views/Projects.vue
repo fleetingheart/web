@@ -7,7 +7,7 @@
                 <i>A fan-made modernization of the classic visual novel</i>
                 <div id="downloads">
                     <div class="download flex flex-row flex-wrap gap-4">
-                        <a href="https://github.com/fleetingheart/ksre/releases/download/v1.2.2/KSRE-win.zip"
+                        <a href="https://github.com/fleetingheart/ksre/releases/download/v1.3.0/KSRE-win.zip"
                             class="fhs-button flex flex-row items-center gap-1">
                             <svg width="32" height="32" viewBox="0 0 24 24">
                                 <path fill="#ffebbe"
@@ -15,7 +15,7 @@
                             </svg>
                             Windows
                         </a>
-                        <a href="https://github.com/fleetingheart/ksre/releases/download/v1.2.2/KSRE-linux.tar.bz2"
+                        <a href="https://github.com/fleetingheart/ksre/releases/download/v1.3.0/KSRE-linux.tar.bz2"
                             class="fhs-button flex flex-row items-center gap-1">
                             <svg width="32" height="32" viewBox="0 0 24 24">
                                 <path fill="#ffebbe"
@@ -23,7 +23,7 @@
                             </svg>
                             Linux
                         </a>
-                        <a href="https://github.com/fleetingheart/ksre/releases/download/v1.2.2/KSRE-mac.zip"
+                        <a href="https://github.com/fleetingheart/ksre/releases/download/v1.3.0/KSRE-mac.zip"
                             class="fhs-button flex flex-row items-center gap-1">
                             <svg width="32" height="32" viewBox="0 0 24 24">
                                 <path fill="#ffebbe"
@@ -31,7 +31,7 @@
                             </svg>
                             Mac
                         </a>
-                        <a href="https://github.com/fleetingheart/ksre/releases/download/v1.2.2/com.fhs.ksre.apk"
+                        <a href="https://github.com/fleetingheart/ksre/releases/download/v1.3.0/com.fhs.ksre.apk"
                             class="fhs-button flex flex-row items-center gap-1">
                             <svg width="32" height="32" viewBox="0 0 24 24">
                                 <path fill="#ffebbe"
@@ -39,7 +39,7 @@
                             </svg>
                             Android
                         </a>
-                        <a href="https://github.com/fleetingheart/ksre/releases/download/v1.2.2/KSRE-ios.ipa"
+                        <a href="https://github.com/fleetingheart/ksre/releases/download/v1.3.0/KSRE-ios.ipa"
                             class="fhs-button flex flex-row items-center gap-1">
                             <svg width="32" height="32" viewBox="0 0 24 24">
                                 <path fill="#ffebbe"
