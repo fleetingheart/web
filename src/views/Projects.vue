@@ -31,7 +31,7 @@
                             </svg>
                             Mac
                         </a>
-                        <a href="https://github.com/fleetingheart/ksre/releases/download/v1.3.0/com.fhs.ksre.apk"
+                        <a href="https://github.com/fleetingheart/ksre/releases/download/v1.3.0/com.fhs.ksre-release.apk"
                             class="fhs-button flex flex-row items-center gap-1">
                             <svg width="32" height="32" viewBox="0 0 24 24">
                                 <path fill="#ffebbe"
