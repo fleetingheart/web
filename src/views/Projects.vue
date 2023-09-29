@@ -23,6 +23,10 @@
                             </svg>
                             Linux
                         </a>
+                        <a href="https://flathub.org/apps/sh.fhs.KatawaShoujoReEngineered" class="fhs-button flex flex-row items-center gap-1">
+                            <img src="/img/flathub.png" alt="Flathub Logo" class="w-6 h-6 pr-1">
+                            Flathub (Linux)
+                        </a>
                         <a href="https://github.com/fleetingheart/ksre/releases/download/v1.3.0/KSRE-mac.zip"
                             class="fhs-button flex flex-row items-center gap-1">
                             <svg width="32" height="32" viewBox="0 0 24 24">
