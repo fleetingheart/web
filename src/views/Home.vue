@@ -14,6 +14,11 @@
                     KS Forums
                 </p>
             </a>
+            <a href="https://steamcommunity.com/groups/fhs_sh" class="fhs-button flex flex-row items-center gap-2 justify-center">
+                <p>
+                    Steam Community
+                </p>
+            </a>
         </div>
     </div>
 </template>
