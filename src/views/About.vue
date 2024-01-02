@@ -42,6 +42,14 @@
     </details>
     <details>
         <summary>
+            <h2>Q. Does KS:RE support save files from the original KS?</h2>
+        </summary>
+        <p>
+            A. Sadly no, the two versions are too different in terms of code for that to be possible. We suggest use a macro to skip through the parts you’ve already read.
+        </p>
+    </details>
+    <details>
+        <summary>
             <h2>Q. How do I get in touch?</h2>
         </summary>
         <p>
