@@ -3,6 +3,7 @@ import Info from "./views/Info.vue";
 import About from "./views/About.vue";
 import Characters from "./views/Characters.vue";
 import Projects from "./views/Projects.vue";
+import Misc from "./views/Misc.vue";
 
 const routes = [
     { path: '/', component: Home },
@@ -10,6 +11,7 @@ const routes = [
     { path: '/about', component: About },
     { path: '/characters', component: Characters },
     { path: '/projects', component: Projects },
+    { path: '/misc', component: Misc }
     
 ]
 
