@@ -1,5 +1,6 @@
 <template>
     <div class="container mx-auto my-5 p-3">
+        <speed-insights/>
         <div class="flex flex-col xl:flex-row gap-2 md:gap-5 items-center justify-center">
             <img class="w-[70%] md:w-[15%]" src="/img/fhs_logo.png" alt="Fleeting Heartbeat Studios Logo">
             <h1 class="text-center font-bold text-4xl xl:text-5xl my-8 xl:my-10">Fleeting Heartbeat Studios</h1>
@@ -23,8 +24,7 @@
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router'
-console.log(useRoute().path)
+import { SpeedInsights } from "@vercel/speed-insights/vue"
 </script>
 
 <style>
