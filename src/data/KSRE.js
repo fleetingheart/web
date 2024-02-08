@@ -9,6 +9,7 @@ export default {
         flathub: "https://flathub.org/apps/sh.fhs.KatawaShoujoReEngineered",
         mac: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/KSRE-mac.zip`,
         android: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/com.fhs.ksre-release.apk`,
+        fdroid: `https://f-droid.org/en/packages/com.fhs.ksre`,
         ios: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/KSRE-ios.ipa`
     }
 }
