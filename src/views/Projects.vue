@@ -138,7 +138,7 @@
                     The Complete Package
                 </h2>
                 <p>
-                    KS:RE comes preloaded with Russian, French, Spanish translations, ready to use with no extra effort on the
+                    KS:RE comes preloaded with Russian, French, Spanish, Deutsch translations, ready to use with no extra effort on the
                     player’s end. Every other official translation won’t be far behind. The simplified codebase of KS:RE
                     makes creating new translations easier than ever, requiring virtually zero programming knowledge.
                     We’re more than willing to port over any finished translation you create and add it to KS:RE-
