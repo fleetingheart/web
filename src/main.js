@@ -1,6 +1,6 @@
 import routes from "./routes.js"
 import { createRouter, createWebHistory } from "vue-router"
-import { inject } from '@vercel/analytics';
+// import { inject } from '@vercel/analytics';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -11,4 +11,4 @@ import './style.css'
 import App from './App.vue'
 
 createApp(App).use(router).mount('#app')
-inject(); // Vercel Analytics
+// inject(); // Vercel Analytics
