@@ -76,4 +76,8 @@ onMounted(async () => {
 #article-content a:hover {
     @apply bg-crayon-dark/20 rounded-md;
 }
+
+#article-content ul {
+    @apply list-disc list-inside;
+}
 </style>
