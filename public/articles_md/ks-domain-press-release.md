@@ -20,6 +20,8 @@ Our special thanks go to:
 
 Without your work, cooperation, and trust in us, today's events would have not been possible, thus we'd like to thank all of you and our whole community for supporting us!
 
+As always, we are very interested in your feedback, so feel free to join the discussion over at the [forums](https://ks.fhs.sh/viewtopic.php?t=13598) or in our [Discord Server](https://discord.gg/EQGu72HrFx)!
+
 We're proud to be the ones responsible for preserving and supporting our favorite game and serving the community with everything we've got. This is an enormous responsibility that we're happy to take head on and we hope that you all can enjoy the results of our work.
 
 — Fleeting Heartbeat Studios
