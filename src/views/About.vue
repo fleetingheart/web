@@ -54,7 +54,7 @@
         </summary>
         <p>
             A. We have a public Discord server! Fleeting Heartbeat Studios members are tagged with their own role, and since we’re spread across the world, there should usually be at least one of us online. We all speak English, and most of us speak at least one other language. Do keep in mind that English is not the first language of every member, though. The server can be found at
-            <a class="underline font-bold text-blue-400 hover:text-blue-500" href="https://discord.gg/49t4CVJNrt">here</a> For other inquiries, email us at <a  class="underline font-bold text-blue-400 hover:text-blue-500" href="mailto://fleetingheartbeatstudios@gmail.com">fleetingheartbeatstudios@gmail.com</a>.
+            <a class="underline font-bold text-blue-400 hover:text-blue-500" href="https://discord.gg/49t4CVJNrt">here</a> For other inquiries, email us at <a  class="underline font-bold text-blue-400 hover:text-blue-500" href="mailto://staff@fhs.sh">staff@fhs.sh</a>.
         </p>
     </details>
     <h1 class="font-bold text-4xl mt-5">Special Thanks</h1>
