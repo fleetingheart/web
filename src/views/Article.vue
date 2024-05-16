@@ -80,4 +80,8 @@ onMounted(async () => {
 #article-content ul {
     @apply list-disc list-inside;
 }
+
+#article-content blockquote {
+    @apply border-l-4 border-crayon-dark p-4 bg-crayon-dark/10 flex flex-col;
+}
 </style>
