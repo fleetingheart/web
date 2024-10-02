@@ -1,4 +1,4 @@
-const KSRE_VERSION = 'v1.4.7';
+const KSRE_VERSION = 'v1.4.8';
 
 export default {
     version: KSRE_VERSION,
