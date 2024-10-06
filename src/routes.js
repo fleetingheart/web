@@ -5,6 +5,7 @@ import Projects from "./views/Projects.vue";
 import Misc from "./views/Misc.vue";
 import Articles from "./views/Articles.vue";
 import Article from "./views/Article.vue";
+import Nowhere from "./views/Nowhere.vue";
 
 
 const routes = [
@@ -15,6 +16,7 @@ const routes = [
     { path: '/misc', component: Misc },
     { path: '/articles', component: Articles },
     { path: '/articles/:file', component: Article },
+    { path: '/:pathMatch(.*)*', component: Nowhere },
 ]
 
 export default routes
