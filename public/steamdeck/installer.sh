@@ -2,6 +2,17 @@
 # Copyright (c) 2025 Fleeting Heartbeat Studios
 # Licensed under MPL 2.0 license.
 
+# This function is used to gracefully fail installation progress.
+function failInstallProgress() {
+    if [ $? -ne "0" ]; then
+        qdbus $installProgress close
+        kdialog --title="${title}" --sorry "Installation failed.
+See the terminal output for errors: note that the terminal will close upon closing this window."
+
+        exit 1
+    fi
+}
+
 title="Katawa Shoujo: Re-Engineered"
 
 installType=`kdialog --title "Installation Options" --radiolist "<div style='padding:20px; text-align:left'>
@@ -32,24 +43,23 @@ if [[ "${installType}" == "separate" ]]; then
     qdbus $installProgress setLabelText "Installing Katawa Shoujo: Re-Engineered from Flathub..."
     flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo || true
     flatpak install --user --assumeyes sh.fhs.ksre || true
-
-    if ! flatpak info "sh.fhs.ksre" >/dev/null 2>&1; then
-        qdbus $installProgress close
-        kdialog --title="${title}" --sorry "Installation failed."
-
-        exit 1
-    fi
+    flatpak info "sh.fhs.ksre"
+    failInstallProgress $? $installProgress
 
     qdbus $installProgress Set "" value 80
     qdbus $installProgress setLabelText "Adding KS:RE as non-Steam game to Steam..."
     # Add-to-Steam shortcut (works only on Steam OS!)
     steamos-add-to-steam ~/.local/share/flatpak/exports/share/applications/sh.fhs.ksre.desktop
+    failInstallProgress $? $installProgress
     sleep 10
     qdbus $installProgress Set "" value 100
     qdbus $installProgress close
 elif [[ "${installType}" == "replace" ]]; then
     baseSteamPath="${HOME}/.local/share/Steam/steamapps/common"
     gameDir="Katawa Shoujo"
+    timestamp="$(date +%s)"
+    gameBackupDir="${gameDir}.${timestamp}"
+    ksreDir="ksre.${timestamp}"
 
     if [ ! -d "${baseSteamPath}/${gameDir}" ]; then
         kdialog --title="${title}" --sorry "Installation aborted.\nEither the Steam release of KS is not installed or it is installed outside default Steam library directory."
@@ -66,18 +76,28 @@ elif [[ "${installType}" == "replace" ]]; then
     curl -L -o ksre.tar.bz2 "${ksreReleaseURL}"
     qdbus $installProgress Set "" value 50
     qdbus $installProgress setLabelText "Replacing Katawa Shoujo with the KS:RE installation..."
-    tar -xf ksre.tar.bz2 -C "${baseSteamPath}/"
-    mv "${baseSteamPath}/${gameDir}" "${baseSteamPath}/${gameDir}.$(date +%s)"
-    ln -s "${baseSteamPath}/KSRE-linux/" "${baseSteamPath}/${gameDir}"
+    mkdir "${baseSteamPath}/${ksreDir}"
+    tar -xf ksre.tar.bz2 --strip-components=1 -C "${baseSteamPath}/${ksreDir}"
+    failInstallProgress $? $installProgress
+    mv "${baseSteamPath}/${gameDir}" "${baseSteamPath}/${gameBackupDir}"
+    failInstallProgress $? $installProgress
+    ln -s "${baseSteamPath}/${ksreDir}" "${baseSteamPath}/${gameDir}"
+    failInstallProgress $? $installProgress
     mv "${baseSteamPath}/${gameDir}/Katawa Shoujo Re-Engineered.py" "${baseSteamPath}/${gameDir}/Katawa Shoujo.py"
+    failInstallProgress $? $installProgress
     mv "${baseSteamPath}/${gameDir}/Katawa Shoujo Re-Engineered.sh" "${baseSteamPath}/${gameDir}/Katawa Shoujo.sh"
+    failInstallProgress $? $installProgress
     mv "${baseSteamPath}/${gameDir}/lib/py3-linux-aarch64/Katawa Shoujo Re-Engineered" \
         "${baseSteamPath}/${gameDir}/lib/py3-linux-aarch64/Katawa Shoujo"
+    failInstallProgress $? $installProgress
     mv "${baseSteamPath}/${gameDir}/lib/py3-linux-armv7l/Katawa Shoujo Re-Engineered" \
         "${baseSteamPath}/${gameDir}/lib/py3-linux-armv7l/Katawa Shoujo"
+    failInstallProgress $? $installProgress
     mv "${baseSteamPath}/${gameDir}/lib/py3-linux-x86_64/Katawa Shoujo Re-Engineered" \
         "${baseSteamPath}/${gameDir}/lib/py3-linux-x86_64/Katawa Shoujo"
+    failInstallProgress $? $installProgress
     rm ksre.tar.bz2
+    failInstallProgress $? $installProgress
     qdbus $installProgress Set "" value 100
     qdbus $installProgress close
 
@@ -95,7 +115,15 @@ else
     steamGameID="3068300" # Vanilla KS Steam ID
 fi
 
-echo $steamGameID
+if [[ $steamGameID == "" ]]; then
+    kdialog --title="${title}" --sorry "Installation partially failed.
+Installer can't detect the identifier of the installed game.
+If the game appears in Steam after reboot, you can play the game and (optionally) install the artwork manually.
+Otherwise, run the installer again.
+See the terminal output for errors: note that the terminal will close upon closing this window."
+
+    exit 1
+fi
 
 artwork=`kdialog --title="${title}" --radiolist "Choose the Steam artwork" \
 "shisha" "Shizune & Misha" off \
@@ -105,7 +133,10 @@ artwork=`kdialog --title="${title}" --radiolist "Choose the Steam artwork" \
 "saki" "Saki & Rika" off`
 
 if [[ "${artwork}" == "" ]]; then
-    kdialog --title="${title}" --sorry "Installation aborted. The game installed without artwork.\nAssign artwork manually using SteamGridDB."
+    kdialog --title="${title}" --msgbox "The game installed successfully.
+Artwork installation aborted. The game installed without artwork.
+Assign artwork manually using SteamGridDB and Decky Loader if needed.
+Return to Steam Gaming Mode to enjoy the game."
 
     exit
 fi
@@ -156,4 +187,5 @@ rm "${steamGameID}.png"
 qdbus $artworkProgress Set "" value 100
 qdbus $artworkProgress close
 
-kdialog --title="${title}" --msgbox "The game installed successfully. Return to Steam Gaming Mode to enjoy it."
+kdialog --title="${title}" --msgbox "The game installed successfully.
+Return to Steam Gaming Mode to enjoy it."
