@@ -90,7 +90,7 @@ fi
 
 steamGameID=""
 if [[ "${installType}" == "separate" ]]; then
-    steamGameID=`python ./shortcuts.py ${HOME}/.local/share/Steam/userdata/*/config | grep "Katawa Shoujo: Re-Engineered" | cut -d "'" -f 6`
+    steamGameID=`python ./shortcuts.py ${HOME}/.local/share/Steam/userdata/*/config | grep "Katawa Shoujo: Re-Engineered" | tail -n -1 | cut -d "'" -f 6`
 else
     steamGameID="3068300" # Vanilla KS Steam ID
 fi
