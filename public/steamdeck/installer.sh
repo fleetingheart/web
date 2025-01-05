@@ -30,6 +30,7 @@ if [[ "${installType}" == "separate" ]]; then
     qdbus $installProgress Set "" value 1
 
     qdbus $installProgress setLabelText "Installing Katawa Shoujo: Re-Engineered from Flathub..."
+    flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo || true
     flatpak install --user --assumeyes sh.fhs.ksre || true
 
     if ! flatpak info "sh.fhs.ksre" >/dev/null 2>&1; then
@@ -42,7 +43,7 @@ if [[ "${installType}" == "separate" ]]; then
     qdbus $installProgress Set "" value 80
     qdbus $installProgress setLabelText "Adding KS:RE as non-Steam game to Steam..."
     # Add-to-Steam shortcut (works only on Steam OS!)
-    steamos-add-to-steam ~/.local/share/flatpak/exports/share/applications/sh.fhs.KatawaShoujoReEngineered.desktop
+    steamos-add-to-steam ~/.local/share/flatpak/exports/share/applications/sh.fhs.ksre.desktop
     sleep 10
     qdbus $installProgress Set "" value 100
     qdbus $installProgress close
