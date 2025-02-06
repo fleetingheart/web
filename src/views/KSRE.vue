@@ -102,14 +102,14 @@
 
                         <p class="text-sm mb-1">These releases are maintained outside of FHS and might not be up-to-date.</p>
                         <div class="download flex flex-row flex-wrap gap-4">
-                            <a href="https://aur.archlinux.org/packages/katawa-shoujo-reengineered-bin" class="fhs-button flex flex-row items-center gap-1">
+                            <a :href="KSRE.platform.aur" class="fhs-button flex flex-row items-center gap-1">
                                 <svg alt="Arch Logo" width="32" height="32" viewBox="0 0 24 24">
                                     <path fill="#ffebbe"
                                     d="M14.3,19.414c0.216-0.569,0.342-1.218,0.342-1.913c0-2.129-1.139-3.86-2.539-3.86c-1.412,0-2.55,1.731-2.55,3.86	c0,0.683,0.114,1.332,0.33,1.89c-4.657,0.49-7.936,2.437-9.268,3.313c2.243-3.234,4.589-7.025,6.831-11.386	c0.558-1.082,1.082-2.152,1.571-3.199C9.21,8.244,9.404,8.381,9.62,8.518c1.002,0.626,1.936,0.968,2.619,1.15	c-0.501-0.376-1.047-0.831-1.605-1.389c-0.421-0.421-0.797-0.843-1.116-1.253C10.463,4.954,11.283,2.961,12,1.071	c1.195,3.165,2.687,6.615,4.554,10.247c1.207,2.334,2.437,4.509,3.666,6.513c-0.353-0.193-0.74-0.376-1.15-0.535	c-0.706-0.273-1.366-0.444-1.936-0.546c0.774,0.387,1.674,0.9,2.619,1.583c0.615,0.456,1.161,0.911,1.628,1.355	c0.011,0.011,0.011,0.011,0.023,0.023c0.649,1.059,1.321,2.038,1.981,2.994C22.076,21.839,18.854,19.926,14.3,19.414z" />
                                 </svg>
                                 AUR
                             </a>
-                            <a href="https://search.nixos.org/packages?channel=24.05&show=katawa-shoujo-re-engineered&from=0&size=50&sort=relevance&type=packages&query=katawa-shoujo-re-engineered" class="fhs-button flex flex-row items-center gap-1">
+                            <a :href="KSRE.platform.nix_os" class="fhs-button flex flex-row items-center gap-1">
                                 <svg alt="NixOS Logo" width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                                     <path fill="#ffebbe" d="M50.732 43.771L20.525 96.428l-7.052-12.033 8.14-14.103-16.167-.042L2 64.237l3.519-6.15 23.013.073 8.27-14.352 13.93-.037zm2.318 42.094l60.409.003-6.827 12.164-16.205-.045 8.047 14.115-3.45 6.01-7.05.008-11.445-20.097-16.483-.034-6.996-12.124zm35.16-23.074l-30.202-52.66L71.888 10l8.063 14.148 8.12-14.072 6.897.002 3.532 6.143-11.57 20.024 8.213 14.386-6.933 12.16z" clip-rule="evenodd" fill-rule="evenodd"/><path fill="#ffebbe" d="M39.831 65.463l30.202 52.66-13.88.131-8.063-14.148-8.12 14.072-6.897-.002-3.532-6.143 11.57-20.024-8.213-14.386 6.933-12.16zm35.08-23.207l-60.409-.003L21.33 30.09l16.204.045-8.047-14.115 3.45-6.01 7.051-.01 11.444 20.097 16.484.034 6.996 12.124zm2.357 42.216l30.207-52.658 7.052 12.034-8.141 14.102 16.168.043L126 64.006l-3.519 6.15-23.013-.073-8.27 14.352-13.93.037z" clip-rule="evenodd" fill-rule="evenodd" />
                                 </svg>
