@@ -2,7 +2,7 @@
     <div class="my-2 flex flex-col gap-10">
         <div id="ksre">
             <img src="/img/ksrev1.png" alt="Katawa Shoujo: Re-Engineered Logo" class="w-full md:w-[45%]">
-            <p class="font-bold text-4xl">Katawa Shoujo: Re-Engineered</p>
+            <h1 class="font-bold text-4xl">Katawa Shoujo: Re-Engineered</h1>
             <div class="flex flex-col gap-3">
                 <i>A fan-made modernization of the classic visual novel</i>
                 <p class="font-mono font-bold text-lg">Current Version: {{ KSRE.version }}</p>

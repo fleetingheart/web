@@ -11,16 +11,16 @@ import Renquill from "./views/Renquill.vue";
 
 
 const routes = [
-    { path: '/', component: Home },
-    { path: '/info', component: Info },
-    { path: '/about', component: About },
-    { path: '/misc', component: Misc },
-    { path: '/articles', component: Articles },
-    { path: '/articles/:file', component: Article },
-    { path: '/:pathMatch(.*)*', component: Nowhere },
-    { path: '/projects', component: Projects },
-    { path: '/projects/ksre', component: ReEngineered },
-    { path: '/projects/renquill', component: Renquill },
+    { path: '/', component: Home, alias: '/home', meta: { title: 'Home' } },
+    { path: '/info', component: Info, meta: { title: 'Info' } },
+    { path: '/about', component: About, meta: { title: 'About Us' } },
+    { path: '/misc', component: Misc, meta: { title: 'Miscellaneous' } },
+    { path: '/articles', component: Articles, meta: { title: 'Blog' } },
+    { path: '/articles/:file', component: Article, meta: { title: 'Article' } }, // <- Dynamic, title doesn't matter
+    { path: '/:pathMatch(.*)*', component: Nowhere, meta: { title: 'Page Not Found' } },
+    { path: '/projects', component: Projects, meta: { title: 'Projects' } },
+    { path: '/projects/ksre', component: ReEngineered, meta: { title: 'Katawa Shoujo: Re-Engineered Project' } },
+    { path: '/projects/renquill', component: Renquill, meta: { title: 'Renquill Project' } },
 ]
 
 export default routes
