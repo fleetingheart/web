@@ -7,7 +7,7 @@ export default {
         windows: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/KSRE-win.zip`,
         linux: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/KSRE-linux.tar.bz2`,
         flathub: "https://flathub.org/apps/sh.fhs.ksre",
-        mac: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/KSRE-mac.zip`,
+        mac: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/KSRE-mac.dmg`,
         android: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/sh.fhs.ksre-release.apk`,
         ios_testflight: `https://testflight.apple.com/join/C33zmsQC`,
         ios: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/KSRE-ios.ipa`,
