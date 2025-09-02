@@ -1,4 +1,4 @@
-const KSRE_VERSION = 'v2.0.2';
+const KSRE_VERSION = 'v2.0.3';
 
 export default {
     version: KSRE_VERSION,
@@ -7,7 +7,7 @@ export default {
         windows: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/KSRE-win.zip`,
         linux: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/KSRE-linux.tar.bz2`,
         flathub: "https://flathub.org/apps/sh.fhs.ksre",
-        mac: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/KSRE-mac.dmg`,
+        mac: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/KSRE-mac.zip`,
         android: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/sh.fhs.ksre-release.apk`,
         ios_testflight: `https://testflight.apple.com/join/C33zmsQC`,
         ios: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/KSRE-ios.ipa`,
