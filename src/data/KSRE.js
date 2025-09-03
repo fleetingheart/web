@@ -9,7 +9,7 @@ export default {
         flathub: "https://flathub.org/apps/sh.fhs.ksre",
         mac: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/KSRE-mac.zip`,
         android: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/sh.fhs.ksre-release.apk`,
-        ios_testflight: `https://testflight.apple.com/join/C33zmsQC`,
+        ios_testflight: `https://testflight.apple.com/join/dq13g5C7`,
         ios: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/KSRE-ios.ipa`,
         fdroid: 'https://f-droid.org/en/packages/sh.fhs.ksre/',
         aur: 'https://aur.archlinux.org/packages/katawa-shoujo-reengineered-bin',
