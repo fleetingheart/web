@@ -5,6 +5,7 @@
             <h1 class="font-bold text-4xl">Renquill</h1>
             <div class="flex flex-col gap-3">
                 <i>An app that helps you translate your RenPy visual novels</i>
+                <p class="text-red-500 bg-red-500/30 text-center rounded-md">This project's development is currently halted.</p>
                 <div class="dl-section">
                     <h1 class="dl-section-header">Links</h1>
                     <div class="download flex flex-row flex-wrap gap-4">

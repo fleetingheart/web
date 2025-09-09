@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col gap-3 justify-center items-center h-full text-center">
         <p class="font-bold text-4xl">Can you keep moving forward?</p>
-        <router-link to="projects" class="fhs-button my-5 flex flex-row gap-3 items-center hover:scale-110" style="padding: 0.8rem;">
+        <router-link to="projects/ksre" class="fhs-button my-5 flex flex-row gap-3 items-center hover:scale-110" style="padding: 0.8rem;">
             <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="#feefd0" d="M3 21v-2h2V5q0-.825.588-1.412T7 3h10q.825 0 1.413.588T19 5v14h2v2zm12-2h2V5h-4.5V3.9q1.1.2 1.8 1.025T15 6.85zm-4-6q.425 0 .713-.288T12 12q0-.425-.288-.712T11 11q-.425 0-.712.288T10 12q0 .425.288.713T11 13"/></svg>
             <p class="text-4xl">Enter</p>
         </router-link>
