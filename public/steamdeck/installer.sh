@@ -90,9 +90,6 @@ elif [[ "${installType}" == "replace" ]]; then
     mv "${baseSteamPath}/${gameDir}/lib/py3-linux-aarch64/Katawa Shoujo Re-Engineered" \
         "${baseSteamPath}/${gameDir}/lib/py3-linux-aarch64/Katawa Shoujo"
     failInstallProgress $? $installProgress
-    mv "${baseSteamPath}/${gameDir}/lib/py3-linux-armv7l/Katawa Shoujo Re-Engineered" \
-        "${baseSteamPath}/${gameDir}/lib/py3-linux-armv7l/Katawa Shoujo"
-    failInstallProgress $? $installProgress
     mv "${baseSteamPath}/${gameDir}/lib/py3-linux-x86_64/Katawa Shoujo Re-Engineered" \
         "${baseSteamPath}/${gameDir}/lib/py3-linux-x86_64/Katawa Shoujo"
     failInstallProgress $? $installProgress
