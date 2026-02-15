@@ -1,4 +1,7 @@
-const KSRE_VERSION = 'v2.0.4';
+const KSRE_VERSION_BACKUP = 'v2.0.4';
+const KSRE_VERSION_API = fetch(`https://api.github.com/repos/fleetingheart/ksre/releases/latest`);
+const KSRE_VERSION = await KSRE_VERSION_API.then(response => response.json()).then(data => data.tag_name).catch(() => KSRE_VERSION_BACKUP);
+
 
 export default {
     version: KSRE_VERSION,
