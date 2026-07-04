@@ -1,15 +1,27 @@
 const KSRE_VERSION_BACKUP = 'v2.0.4';
+const KSRE_INSTALLER_VERSION_BACKUP = 'v0.1.0';
 const KSRE_VERSION_API = fetch(`https://api.github.com/repos/fleetingheart/ksre/releases/latest`);
+const KSRE_INSTALLER_VERSION_API = fetch(`https://api.github.com/repos/fleetingheart/ksre-installer/releases/latest`);
 const KSRE_VERSION = await KSRE_VERSION_API.then(response => response.json()).then(data => data.tag_name).catch(() => KSRE_VERSION_BACKUP);
+const KSRE_INSTALLER_VERSION = await KSRE_INSTALLER_VERSION_API.then(response => response.json()).then(data => data.tag_name).catch(() => KSRE_INSTALLER_VERSION_BACKUP);
 
 
 export default {
     version: KSRE_VERSION,
+    installerVersion: KSRE_INSTALLER_VERSION,
+    installer: {
+        windows: `https://github.com/fleetingheart/ksre-installer/releases/download/${KSRE_INSTALLER_VERSION}/KSRE-Installer-Windows.zip`,
+        mac: `https://github.com/fleetingheart/ksre-installer/releases/download/${KSRE_INSTALLER_VERSION}/KSRE-Installer-macOS-universal.dmg`,
+        linux_x64: `https://github.com/fleetingheart/ksre-installer/releases/download/${KSRE_INSTALLER_VERSION}/KSRE-Installer-Linux-x86_64.tar.bz2`,
+        linux_arm64: `https://github.com/fleetingheart/ksre-installer/releases/download/${KSRE_INSTALLER_VERSION}/KSRE-Installer-Linux-aarch64.tar.bz2`
+    },
     platform: {
         web: "https://play.fhs.sh/",
         windows: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/KSRE-win.zip`,
         linux: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/KSRE-linux.tar.bz2`,
         flathub: "https://flathub.org/apps/sh.fhs.ksre",
+        appimage_x64: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/sh.fhs.ksre-x86_64.AppImage`,
+        appimage_arm64: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/sh.fhs.ksre-aarch64.AppImage`,
         mac: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/KSRE-mac.zip`,
         android: `https://github.com/fleetingheart/ksre/releases/download/${KSRE_VERSION}/sh.fhs.ksre-release.apk`,
         ios_testflight: `https://testflight.apple.com/join/dq13g5C7`,

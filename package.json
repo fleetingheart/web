@@ -13,7 +13,6 @@
     "@vercel/speed-insights": "^1.1.0",
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.9",
-    "file-saver": "^2.0.5",
     "marked": "^12.0.2",
     "postcss": "^8.4.49",
     "prismjs": "^1.29.0",
